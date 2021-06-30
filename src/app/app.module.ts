@@ -25,6 +25,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import { ModalDialogService } from './services/modal-dialog.service';
+import { DeudoresComponent } from './components/deudores/deudores.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { ModalDialogService } from './services/modal-dialog.service';
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
       { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
-      { path: 'articulos', component: ArticulosComponent }
+      { path: 'articulos', component: ArticulosComponent },
+      { path: 'deudores', component: DeudoresComponent }
     ])
   ],
   declarations: [
@@ -49,7 +51,8 @@ import { ModalDialogService } from './services/modal-dialog.service';
     ArticulosFamiliasComponent,
     MenuComponent,
     ArticulosComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    DeudoresComponent
   ],
   entryComponents: [ModalDialogComponent],
   bootstrap: [AppComponent],

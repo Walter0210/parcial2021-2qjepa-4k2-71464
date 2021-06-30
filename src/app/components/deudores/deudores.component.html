@@ -1,0 +1,50 @@
+<h3>{{Titulo}} <small>{{TituloAccionABMC[AccionABMC]}}</small></h3>
+
+<!-- Tabla de resutados de busqueda y Paginador-->
+<div id="divTablaResultados" *ngIf="AccionABMC == 'L' &&  Items?.length > 0">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th class="text-center">Nombre y apellido</th>
+      <th class="text-center">Monto adeudado</th>
+      <th class="text-center">Incobrable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Items">
+      <td>{{item.Nombre | uppercase}}</td>
+      <td>{{GetArticuloFamiliaNombre(item.IdArticuloFamilia)}}</td>
+      <td class="text-right">{{item.Precio | currency: "$"}}</td>
+      <td class="text-right">{{item.Stock}}</td>
+      <td>{{item.FechaAlta| date:'dd/MM/yyyy'}}</td>
+      <td>{{item.Activo ? 'SI' : 'NO'}}</td>
+      <td class="text-center text-nowrap">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-primary"
+          title="Consultar"
+          (click)="Consultar(item)"
+        >
+          <span class="fas fa-eye"></span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-primary"
+          title="Modificar"
+          (click)="Modificar(item)"
+        >
+          <span class="fas fa-pencil-alt"></span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-{{ item.Activo ? 'danger':'success'}}"
+          title="{{item.Activo ? 'Desactivar':'Activar'}}"
+          (click)="ActivarDesactivar(item)"
+        >
+          <span class="fas fa-{{item.Activo ? 'times':'check'}}"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
