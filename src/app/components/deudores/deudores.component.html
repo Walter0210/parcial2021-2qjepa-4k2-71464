@@ -1,5 +1,5 @@
 <h3>{{Titulo}} <small>{{TituloAccionABMC[AccionABMC]}}</small></h3>
-<div class="row justify-content-center">
+<div class="row justify-content-center" *ngIf="AccionABMC == 'L'">
   <button type="button" class="btn btn-primary" (click)="Agregar()">
     <span class="fas fa-plus"> </span>
     Agregar Deudor
@@ -129,6 +129,5 @@
     id="divMsjFormRegistro"
     class="row alert alert-danger"
     *ngIf="submitted && FormRegistro.invalid"
-  >
-  </div>
+  ></div>
 </form>

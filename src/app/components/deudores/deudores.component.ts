@@ -45,7 +45,7 @@ export class DeudoresComponent implements OnInit {
         null,
         [Validators.required, Validators.pattern('^\\d{1,7}$')]
       ],
-      DeudorIncobrable: [false]
+      DeudorIncobrable: [true]
     });
 
     this.GetDeudores();
@@ -59,7 +59,7 @@ export class DeudoresComponent implements OnInit {
 
   Agregar() {
     this.AccionABMC = 'A';
-    this.FormRegistro.reset({ Activo: true, IdArticulo: 0 });
+    this.FormRegistro.reset({ DeudorIncobrable: true, DeudorId: 0 });
     this.submitted = false;
     this.FormRegistro.markAsUntouched();
   }
