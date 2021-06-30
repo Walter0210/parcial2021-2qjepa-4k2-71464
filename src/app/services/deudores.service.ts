@@ -6,7 +6,7 @@ import {
   HttpParams
 } from '@angular/common/http';
 import { of } from 'rxjs';
-import { Deudor } from '../../models/deudor';
+import { Deudor } from '../models/deudor';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Deudor } from '../models/deudor';
+import { Deudor } from '../../models/deudor';
 import { DeudoresService } from '../../services/deudores.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalDialogService } from '../../services/modal-dialog.service';
