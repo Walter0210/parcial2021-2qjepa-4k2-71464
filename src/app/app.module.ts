@@ -26,6 +26,7 @@ import {
 import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 import { ModalDialogService } from './services/modal-dialog.service';
 import { DeudoresComponent } from './components/deudores/deudores.component';
+import { DeudoresService } from './services/deudores.service';
 
 @NgModule({
   imports: [
@@ -62,7 +63,8 @@ import { DeudoresComponent } from './components/deudores/deudores.component';
     MockArticulosFamiliasService,
     ArticulosFamiliasService,
     ArticulosService,
-    ModalDialogService
+    ModalDialogService,
+    DeudoresService
   ]
 })
 export class AppModule {}
